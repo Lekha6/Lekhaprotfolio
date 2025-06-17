@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+    }
+
+    nav {
+      background-image: url('https://images.unsplash.com/photo-1623054025880-48d5182f6dfb?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 1rem;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5); /* semi-transparent */
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #ffeaa7;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffeaa7;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fdfbfb;
+    }
+
+    .header-content h2 {
+      margin: 0;
+      font-size: 2rem;
+      color: #444;
+    }
+
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    #about img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ccc;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .project-card h3 {
+      margin: 0;
+    }
+
+    .project-card p {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      transform: rotateY(180deg);
+      background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .skills {
+      margin: 20px 0;
+    }
+
+    .contact {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .contact-link {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <h1>LEKHA G</h1>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h2>Java & Web Developer Portfolio</h2>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- About Me -->
+    <section id="about">
+      <img src="https://i.pinimg.com/736x/5d/cb/b0/5dcbb09ebb200e40fff9443e031fcfc6.jpg" alt="About Me Picture" />
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I am a dedicated Java Developer with a strong foundation in object-oriented programming and full-stack web development.
+          I specialize in building robust, scalable, and maintainable applications using Java, Spring Framework, JDBC, and Hibernate.
+          With hands-on experience in database design, RESTful APIs, and front-end technologies like HTML, CSS, and JavaScript,
+          I enjoy solving real-world problems through clean and efficient code. My passion lies in developing high-performance backend systems,
+          collaborating in cross-functional teams, and continuously learning new technologies to deliver quality software solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Spring Framework</li>
+        <li>Hibernate</li>
+        <li>JDBC</li>
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>MySQL</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Tourism Booking Portal</h3>
+          <p>
+            Developed a portal offering features like booking transportation, accommodation, and food services.
+            User registration and authentication were implemented.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Employee Management System</h3>
+          <p>
+            Designed a web application for HR automation and employee data management.
+            Enhanced data accuracy and process efficiency.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Academic Guidance Platform</h3>
+          <p>
+            Developed a web-based system to support students through personalized learning, progress tracking, and AI-driven recommendations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:lekhareddylekha@gmail.com" class="contact-link">lekhareddylekha@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/lekha-g-a64a41291/" class="contact-link">linkedin.com/in/lekha-g-a64a41291</a></p>
+      <p>GitHub: <a href="https://github.com/Lekha6" class="contact-link">github.com/Lekha6</a></p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Lekha G. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
